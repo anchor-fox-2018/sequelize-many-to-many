@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SUBJECT</title>
+</head>
+
+<body>
+    <h1>EDIT SUBJECT</h1>
+    <h5><a href="/subjects">Show All Subjects</a></h5>
+    <br>
+    <form action="/subjects/edit/<%= subject.id %>" method="POST">
+        <div>
+            <label for="subjectName">Subject Name</label>
+            <input type="text" name="subject_name" value="<%= subject.subject_name %>" placeholder="Enter subject name">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

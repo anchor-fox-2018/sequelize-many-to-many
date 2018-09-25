@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>STUDENT</title>
+</head>
+
+<body>
+    <h1>ADD STUDENT</h1>
+    <h5><a href="/students">Show All Students</a></h5>
+    <br>
+    <form action="/students/add" method="POST">
+        <div>
+            <label for="firstName">First Name</label>
+            <input type="text" name="first_name" value="" placeholder="Enter student's first name">
+        </div>
+        <div>
+            <label for="lastName">Last Name</label>
+            <input type="text" name="last_name" value="" placeholder="Enter student's last name">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="text" name="email" value="" placeholder="Enter student's email">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

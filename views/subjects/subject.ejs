@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SUBJECT</title>
+</head>
+
+<body>
+    <div>
+        <h1>ALL SUBJECTS</h1>
+        <h5><a href="/">Homepage</a></h5>
+        <h5><a href="/subjects/add">Add Subjects</a></h5>
+
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Subject Name</th>
+                <th>Options</th>
+            </tr>
+            <% subjects.forEach(subject => { %>
+                <tr>
+                    <td>
+                        <%= subject.id %>
+                    </td>
+                    <td>
+                        <%= subject.subject_name %>
+                    </td>
+                    <td>
+                        <a href="subjects/edit/<%= subject.id %>">Edit</a>
+                        <a href="subjects/delete/<%= subject.id %>" onclick="return confirm('Delete this subject?')">Delete</a>
+                    </td>
+                </tr>
+                <% }) %>
+        </table>
+    </div>
+</body>
+
+</html>
