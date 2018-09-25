@@ -12,21 +12,26 @@
     <h1>EDIT TEACHER</h1>
     <h5><a href="/teachers">Show All Teachers</a></h5>
     <br>
-    <form action="/teachers/edit/<%= teacher.id %>" method="POST">
-        <div>
-            <label for="firstName">First Name</label>
-            <input type="text" name="first_name" value="<%= teacher.first_name %>" placeholder="Enter teacher's first name">
-        </div>
-        <div>
-            <label for="lastName">Last Name</label>
-            <input type="text" name="last_name" value="<%= teacher.last_name %>" placeholder="Enter teacher's last name">
-        </div>
-        <div>
-            <label for="email">Email</label>
-            <input type="text" name="email" value="<%= teacher.email %>" placeholder="Enter teacher's email">
-        </div>
-        <button type="submit">Submit</button>
-    </form>
+    <% if (typeof err !== "undefined") { %>
+        <h2>
+            <%= err %>
+        </h2>
+        <% } %>
+            <form action="/teachers/edit/<%= teacher.id %>" method="POST">
+                <div>
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="first_name" value="<%= teacher.first_name %>" placeholder="Enter teacher's first name">
+                </div>
+                <div>
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="last_name" value="<%= teacher.last_name %>" placeholder="Enter teacher's last name">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="text" name="email" value="<%= teacher.email %>" placeholder="Enter teacher's email">
+                </div>
+                <button type="submit">Submit</button>
+            </form>
 </body>
 
 </html>

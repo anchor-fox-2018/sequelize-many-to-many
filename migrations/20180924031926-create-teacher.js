@@ -23,6 +23,9 @@ module.exports = {
                     }
                 }
             },
+            SubjectId: {
+                type: Sequelize.INTEGER
+            },
             createdAt: {
                 type: Sequelize.DATE,
                 defaultValue: sequelize.literal('NOW()')

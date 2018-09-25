@@ -18,6 +18,8 @@
             <tr>
                 <th>Id</th>
                 <th>Subject Name</th>
+                <th>Teacher</th>
+                <th>Action</th>
                 <th>Options</th>
             </tr>
             <% subjects.forEach(subject => { %>
@@ -28,6 +30,16 @@
                     <td>
                         <%= subject.subject_name %>
                     </td>
+                    <td>
+                        <% if (subject.Teachers.length > 0) { %>
+                            <% let number = 1 %>
+                                <% subject.Teachers.forEach(function(teacher){ %>
+                                    <%- `${number}. ${teacher.first_name} ${teacher.last_name}<br>` %>
+                                        <% number++ %>
+                                            <% }) %>
+                                                <% } %>
+                    </td>
+                    <td><a href="/subjects/<%=subject.id%>/enroll">Enrolled Students</a></td>
                     <td>
                         <a href="subjects/edit/<%= subject.id %>">Edit</a>
                         <a href="subjects/delete/<%= subject.id %>" onclick="return confirm('Delete this subject?')">Delete</a>
